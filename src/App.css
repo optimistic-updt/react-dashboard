@@ -1,38 +1,110 @@
-.App {
-  text-align: center;
+/* ------------ setup --------------------- */
+
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  font-size: 16px;
+
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+a {
+  text-decoration: none;
+  cursor: pointer;
+  margin: 0 5px;
+  color: black;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* ------------ components --------------------- */
+
+
+button {
+  font-size: 100%;
+  padding: 4px 16px;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  background-color: aqua;
+}
+
+
+/* ------------ section header --------------------- */
+
+
+.main-header {
+  background-color: rgb(126, 45, 255);
+  padding: 10px;
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  box-shadow: 0 2px 2px #1f1f1f;
+  margin-bottom: 40px;
 }
 
-.App-link {
-  color: #61dafb;
+.main-header .logo {
+  height: 50px;
+  cursor: pointer;
+  
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.nav {
+  margin: 0 auto;
+}
+
+.nav a {
+  margin-right: 30px;
+  transition: all 0.3s ease;
+  padding-bottom: 10px;
+  color: #ffffff;
+}
+
+.nav a:hover {
+  color: aqua;
+  border-bottom: 2px solid aqua;
+}
+
+/* ------------ Feeling --------------------- */
+.section--feeling {
+  border: 1px solid rgb(109, 109, 109);
+  padding: 10px;
+  margin: 0 auto;
+  box-shadow: 0 2px 2px #8c8c8c;
+}
+
+.section--feeling::after{
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.section--feeling input {
+  display: block;
+  height: 2rem;
+  font-size: 100%;
+  width: 100%;
+  border: none;
+}
+
+.section--feeling button {
+  float: right;
+}
+
+
+
+
+
+
+
+.main-footer {
+  background-color: rgb(111, 41, 223);
+  padding: 30px;
+  margin-top: 40px;
 }
