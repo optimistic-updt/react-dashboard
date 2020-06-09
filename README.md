@@ -1,4 +1,12 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# React Life Dashboard
+
+<!-- ## Check it out [here]() -->
+
+### API used
+- [Complimentr for compliments](https://complimentr.com/)
+- [Sentim-api for text sentiments](https://sentim-api.herokuapp.com/)
+
+
 
 ## Available Scripts
 
