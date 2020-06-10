@@ -1,0 +1,32 @@
+.to-do {
+  grid-area: 2 / 2 /span 2 / span 2;
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+  box-sizing: border-box;
+}
+
+.to-do .to-do--grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  border: 1px solid black;
+  width: 100%;
+}
+
+.to-do .to-do--grid h6 {
+  border-bottom: 1px solid #000;
+  text-align: center;
+}
+
+.to-do--grid-square {
+  margin-top: 5px;
+}
+
+.to-do .input-flex {
+  display: flex;
+  align-items: baseline;
+  position: absolute;
+  bottom: 0;
+  width: 95%;
+}

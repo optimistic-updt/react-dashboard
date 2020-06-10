@@ -1,6 +1,7 @@
 import React from 'react'
 import './Sentiment.css'
 
+import Input from '../Input/Input'
 import axios from 'axios';
 
 
@@ -8,7 +9,8 @@ class Sentiment extends React.Component {
 
   state = {
     content: "",
-    output: ""
+    output: "",
+    isLoading: false,
   }
   
   handleChange = (e) => {
@@ -19,6 +21,9 @@ class Sentiment extends React.Component {
   
   fetchSentiment = (e) => {
     e.preventDefault()
+    this.setState({
+      isLoading: true
+    })
   
     let apiRequest = {
       method: 'post',
@@ -38,16 +43,19 @@ class Sentiment extends React.Component {
   
         if (type === "positive") {
           this.setState({
-            output: "Awesome, I'm glad to hear!"
+            output: "Awesome, I'm glad to hear!",
+            isLoading: false
           })
         } else {
+
           // fetch a compliment and render it
           axios('https://complimentr.com/api')
             .then(res => {
               let { compliment } = res.data
   
               this.setState({
-                output: compliment
+                output: compliment,
+                isLoading: false
               })
           })
           .catch(err => console.log(err))
@@ -57,13 +65,24 @@ class Sentiment extends React.Component {
   }
 
   render() {
+    let {output, isLoading} = this.state
 
     return(
       <section className="widget section--feeling sentiment">
         <form action="">
           <input type="text" placeholder="How are you feeling today?" onChange={this.handleChange}/>
-          <output>{this.state.output}</output>
-          <button onClick={this.fetchSentiment} className="button button-analyse" disabled={this.state.content.length === 0}>Analyze</button>
+          
+          {/* <Input placeholder="How are you feeling today?" onChange={this.handleChange} /> */}
+
+          <output>{isLoading ? "Thinking..." : output}</output>
+
+          <button 
+            onClick={this.fetchSentiment} 
+            className="button button-analyse" 
+            disabled={this.state.content.length === 0}
+            >Analyze
+          </button>
+
         </form>
       </section>
     )

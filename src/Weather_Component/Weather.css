@@ -1,3 +1,16 @@
 .weather {
   grid-area: 1 / 4 / span 1 / span 1  ;
+  text-align: right;
+}
+
+.weather p {
+  padding: 10px;
+}
+
+.weather .temperature {
+  margin-left: 25%;
+}
+
+.weather .toggle-switch {
+  height: 100px;
 }

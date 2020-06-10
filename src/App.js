@@ -3,11 +3,11 @@ import './grid.css';
 import './App.css';
 // import axios from 'axios';
 
-import Header_main from './Header_main_component/Header_main';
+import HeaderMain from './Header_main_component/Header_main';
 import Sentiment from './Sentiment_component/Sentiment'
 import Weather from './Weather_Component/Weather'
 import ToDo from './To_do_component/ToDo'
-import Footer_main from './Footer_main_component/Footer_main'
+import FooterMain from './Footer_main_component/Footer_main'
 
 const dotenv = require('dotenv');
 dotenv.config();
@@ -19,7 +19,7 @@ function App() {
   return (
     <div className="App">
       
-      <Header_main />
+      <HeaderMain />
 
       <main className="main-wrapper">
         <Sentiment />
@@ -27,7 +27,7 @@ function App() {
         <ToDo />
       </main>
 
-      <Footer_main />
+      <FooterMain />
 
     </div>
   );

@@ -7,7 +7,7 @@ import ToggleSwitch from '../ToggleSwitch/ToggleSwitch';
 
 
 
-function Header_main() {
+function HeaderMain() {
   return (
     <header className="main-header section group">
     <img src="../logo192.png" alt="logo" className="logo"/>
@@ -30,4 +30,4 @@ function Header_main() {
   )
 }
 
-export default Header_main
+export default HeaderMain

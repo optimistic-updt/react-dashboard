@@ -1,15 +1,19 @@
 import React from 'react'
+import './FooterMain.css'
+import { FontAwesomeIcon }  from '@fortawesome/react-fontawesome'
+import { faTwitterSquare, faGithubSquare, faLinkedin } from '@fortawesome/free-brands-svg-icons'
 
-function Footer_main() {
+function FooterMain() {
   return(
     <footer className="main-footer">
       <p>&copy; Kevin Garcia Fernandez</p>
-      <i>GitHub</i>
-      <i>GitHub</i>
-      <i>GitHub</i>
-      <i>GitHub</i>
+      <div className="socials">
+        <a href="https://github.com/CumulusGround"><FontAwesomeIcon icon={faGithubSquare} size="3x" /></a>
+        <a href="https://www.linkedin.com/in/kevgarciaf/"><FontAwesomeIcon icon={faLinkedin} size="3x" /></a>
+      </div>
     </footer>
   )
 }
 
-export default Footer_main
+export default FooterMain
+

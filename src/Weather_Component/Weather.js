@@ -19,17 +19,16 @@ class Weather extends React.Component {
 
     function extractLocation(position) {
       let { latitude , longitude } = position.coords
-
       console.log(`lat ${latitude} & long ${longitude}`);
 
       let coordinates = `${latitude}%2C+${longitude}`
 
       // fetch Temperature for melbourne
       getTemperature().then(res => {
-        console.log(res);
-        // this.setState({
-        //   // temperature: getTemperature
-        // })
+        console.log(res.data);
+        this.setState({
+          temperature: res.data
+        })
       })
     }
   
@@ -55,13 +54,11 @@ class Weather extends React.Component {
     return(
       <section className="weather widget section--weather">
         <h4>Melbourne, Australia</h4>
-        <span>icon</span>
-        <span>{this.state.temperature}ºC</span>
-        {/* <label className="switch">
-          <input type="checkbox" name="" id="" />
-          <span className="slider"></span>
-        </label> */}
-        <ToggleSwitch />
+        <p>
+          <span>icon</span>
+          <span className="temperature">{this.state.temperature}ºC</span>
+        </p>
+        <ToggleSwitch className="toggle-switch"/>
       </section>
     )
   }
