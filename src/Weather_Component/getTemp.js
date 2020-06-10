@@ -1,4 +1,6 @@
 const axios = require('axios');
+const dotenv = require('dotenv');
+dotenv.config();
 
 
 async function getTemperature(geoCoding = '-37.8136,144.9631') {

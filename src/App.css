@@ -15,8 +15,7 @@ body {
 a {
   text-decoration: none;
   cursor: pointer;
-  margin: 0 5px;
-  color: black;
+  /* margin: 0 5px; */
 }
 
 /* ------------ components --------------------- */
@@ -26,7 +25,7 @@ button {
   font-size: 100%;
   padding: 4px 16px;
   font-weight: bold;
-  border-radius: 5px;
+  /* border-radius: 5px; */
   cursor: pointer;
   transition: all 0.3s ease;
 }
@@ -55,123 +54,18 @@ button:hover {
   
 }
 
-.nav {
-  margin: 0 auto;
+
+
+.main-wrapper {
+  display: -ms-grid;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: auto;
 }
 
-.nav a,
-.nav a {
-  margin-right: 30px;
-  transition: all 0.3s ease;
-  padding-bottom: 10px;
-  color: #ffffff;
-}
 
-.nav a:hover {
-  color: aqua;
-  border-bottom: 2px solid aqua;
-}
 
 /* ------------ Feeling --------------------- */
-.widget {
-  border: 1px solid rgb(109, 109, 109);
-  padding: 10px;
-  box-shadow: 0 2px 2px #8c8c8c;
-  border-radius: 5px;
-  margin: 10px;
-}
-
-.section--feeling {
-  margin: 0 auto;
-}
-
-.section--feeling::after{
-  content: "";
-  display: table;
-  clear: both;
-}
-
-.section--feeling input {
-  display: block;
-  height: 2rem;
-  font-size: 100%;
-  width: 100%;
-  border: none;
-  margin-bottom: 10px;
-  background-color: #f2f2f2;
-  padding-left: 5px;
-}
-
-.section--feeling output {
-  width: 100%;
-}
-
-.section--feeling button {
-  float: right;
-}
-
-
-/* ------------ weather --------------------- */
-
-
-
-/* --- toggle switch --- */
-
-.section--weather .switch {
-  position: relative;
-  display: inline-block;
-  width: 60px;
-  height: 34px;
-}
-
-.section--weather .switch input {
-  opacity: 0;
-  width: 0;
-  height: 0;
-}
-
-.section--weather .switch .slider {
-  position: absolute;
-  cursor: pointer;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: #ccc;
-  -webkit-transition: .4s;
-  transition: .4s;
-  border-radius: 34px;
-}
-
-
-.section--weather .switch .slider::before {
-  position: absolute;
-  content: "";
-  height: 26px;
-  width: 26px;
-  left: 4px;
-  bottom: 4px;
-  background-color: #fff;
-  -webkit-transition: .4s;
-  transition: .4s;
-  border-radius: 50%;
-}
-
-.section--weather input:checked + .slider {
-  background-color: #2196f3;
-}
-
-.section--weather input:focus + .slider {
-  box-shadow: 0 0 1px #2196f3;
-}
-
-.section--weather input:focus + .slider::before {
-  -webkit-transform: translateX(26px);
-  -ms-transform: translateX(26px);
-  transform: translateX(26px);
-}
-
-
 
 
 /* ------------ Footer --------------------- */

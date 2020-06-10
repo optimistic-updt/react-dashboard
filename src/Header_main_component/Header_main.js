@@ -1,13 +1,8 @@
 import React from 'react';
 import Login from './login'
+import NavCategory from './NavCategory'
+import ToggleSwitch from '../ToggleSwitch/ToggleSwitch';
 
-
-function NavCategory(props) {
-  return(
-    <a href="#">{props.name}</a>
-    
-  )
-}
 
 
 
@@ -20,19 +15,17 @@ function Header_main() {
     <nav className="nav">
       <a href="#">Overview</a>
       <NavCategory name="Calendar" menuItems={['month', 'week', 'day']} />
+
       <NavCategory name="Finance" menuItems={['test', 'test', 'test', 'test', 'test']} /> 
+
       <NavCategory name="Fitness" menuItems={['overview', 'running', 'gym', 'golf', 'test']} />
     </nav>
 
-    <label className="switch">
-      <input type="checkbox" name="" id="" />
-      <span className="slider"></span>
-    </label>
 
-    {/* <Login /> */}
-    <a href="#">John Smith  ^ </a>
-      <button>Sign out</button>
-    {/* <button className="button button-user">User</button> */}
+    <ToggleSwitch />
+
+    <Login />
+  
   </header>
   )
 }

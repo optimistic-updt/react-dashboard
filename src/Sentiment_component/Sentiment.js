@@ -1,4 +1,6 @@
 import React from 'react'
+import './Sentiment.css'
+
 import axios from 'axios';
 
 
@@ -57,7 +59,7 @@ class Sentiment extends React.Component {
   render() {
 
     return(
-      <section className="widget section--feeling">
+      <section className="widget section--feeling sentiment">
         <form action="">
           <input type="text" placeholder="How are you feeling today?" onChange={this.handleChange}/>
           <output>{this.state.output}</output>

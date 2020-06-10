@@ -1,12 +1,12 @@
 import React from 'react';
 import './grid.css';
 import './App.css';
-import axios from 'axios';
+// import axios from 'axios';
 
 import Header_main from './Header_main_component/Header_main';
 import Sentiment from './Sentiment_component/Sentiment'
 import Weather from './Weather_Component/Weather'
-import To_do from './To_do_component/To_do'
+import ToDo from './To_do_component/ToDo'
 import Footer_main from './Footer_main_component/Footer_main'
 
 const dotenv = require('dotenv');
@@ -21,10 +21,10 @@ function App() {
       
       <Header_main />
 
-      <main>
+      <main className="main-wrapper">
         <Sentiment />
         <Weather />
-        <To_do />
+        <ToDo />
       </main>
 
       <Footer_main />

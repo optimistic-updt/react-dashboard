@@ -1,0 +1,77 @@
+.nav {
+  margin: 0 auto;
+  display: flex;
+}
+
+.nav > a, .nav button {
+  transition: all 0.3s ease;
+  padding: 10px 15px;
+  color: #ffffff;
+  font-weight: 700;
+  text-align: center;
+  border-bottom: 2px solid transparent;
+  border-radius: none;
+
+}
+
+.nav > a:hover,
+.nav button:hover {
+  color: aqua;
+  border-bottom: 2px solid aqua;
+  background-color: inherit;
+  border-radius: none;
+}
+
+
+.nav--category {
+  position: relative;
+  box-sizing: border-box;
+  float: left;
+}
+
+.nav--category-title {
+  font-weight: 700;
+  border: none;
+  outline: none;
+  padding: 10px 15px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+.nav--category-dropdown {
+  display: none;
+  position: absolute;
+  background-color: rgb(242, 242, 242);
+  min-width: 160px;
+  box-shadow: 0 2px 2px #8c8c8c;
+  z-index: 1;
+  /* margin-top: px; */
+  border: 1px solid rgb(109,109,109);
+  border-radius: 5px;
+  /* width: 100%; */
+
+}
+
+.nav--category-dropdown a{
+  float: none;
+  color: black;
+  width: 100%;
+  display: block;
+  padding: 10px 15px;
+  text-decoration: none;
+  text-align: left;
+}
+
+.nav--category-dropdown a:hover{
+  color: black;
+  background-color: aqua;
+}
+
+.nav--category-dropdown a:last-child{
+  padding-bottom: 15px;
+}
+
+.nav--category:hover .nav--category-dropdown {
+  display: block;
+}

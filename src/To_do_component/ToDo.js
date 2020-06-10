@@ -1,6 +1,6 @@
 import React from 'react'
 
-function To_do() {
+function ToDo() {
   return(
     <section className="widget">
       <input type="text"/>
@@ -12,4 +12,4 @@ function To_do() {
   )
 }
 
-export default To_do
+export default ToDo

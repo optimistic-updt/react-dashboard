@@ -1,0 +1,48 @@
+.login {
+  margin-left: 15px;
+  position: relative;
+  box-sizing: border-box;
+  float: right;
+}
+
+.login--username {
+  font-weight: 700;
+  color: #ffffff;
+  padding: 10px 15px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+  border: 2px solid transparent;
+  outline: none;
+}
+
+.login--username:hover {
+  color: aqua;
+  border-bottom: 2px solid aqua;
+  background-color: inherit;
+  border-radius: none;
+}
+
+.login--dropdown {
+  /* display: none; */
+  position: absolute;
+  background-color: rgb(242, 242, 242);
+  min-width: 160px;
+  box-shadow: 0 2px 2px #8c8c8c;
+  z-index: 1;
+  /* margin-top: px; */
+  border: 1px solid rgb(109,109,109);
+  border-radius: 5px;
+  width: 100%;
+
+}
+
+.login--dropdown a{
+  float: none;
+  color: black;
+  width: 100%;
+  display: block;
+  padding: 10px 15px;
+  text-decoration: none;
+  text-align: left;
+}

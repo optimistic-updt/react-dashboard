@@ -1,18 +1,36 @@
 import React from 'react'
-import reverseGeoCoding from './reverseGeo'
+import './Weather.css'
+// import reverseGeoCoding from './reverseGeo'
+import getTemperature from './getTemp'
+import ToggleSwitch from '../ToggleSwitch/ToggleSwitch'
+
+
+
+
 
 class Weather extends React.Component {
 
   state = {
-    temperature: 0
+    temperatureInC: 0
   }
 
 
-  getLocation = () => {
+  getLocationAndSetTemperature = () => {
+
     function extractLocation(position) {
       let { latitude , longitude } = position.coords
+
       console.log(`lat ${latitude} & long ${longitude}`);
-      return `${latitude}%2C+${longitude}`
+
+      let coordinates = `${latitude}%2C+${longitude}`
+
+      // fetch Temperature for melbourne
+      getTemperature().then(res => {
+        console.log(res);
+        // this.setState({
+        //   // temperature: getTemperature
+        // })
+      })
     }
   
     function locNotSupported() {
@@ -29,25 +47,21 @@ class Weather extends React.Component {
 
 
   componentDidMount() {
-    // let coords = this.getLocation()
-    //fetch Temperature for melbourne
-    this.setState({
-      // temperature: getTemperature
-    })
+    this.getLocationAndSetTemperature()
   }
 
 
   render() {
-    
     return(
-      <section className="widget section--weather">
+      <section className="weather widget section--weather">
         <h4>Melbourne, Australia</h4>
         <span>icon</span>
         <span>{this.state.temperature}ºC</span>
-        <label className="switch">
+        {/* <label className="switch">
           <input type="checkbox" name="" id="" />
           <span className="slider"></span>
-        </label>
+        </label> */}
+        <ToggleSwitch />
       </section>
     )
   }
