@@ -1,10 +1,11 @@
 .main-footer {
-  background-color: rgb(126, 45, 255);
   padding: 10px;
   text-align: center;
-  box-shadow: 0 -2px 2px #1f1f1f;
+  box-shadow: 0 -2px 2px #373737;
   margin-top: 40px;
-  /* height: 70px; */
+  bottom: 0;
+  position: absolute;
+  width: 100%;
 }
 
 .main-footer p {
@@ -18,6 +19,8 @@
 .main-footer a {
   text-decoration: none;
   cursor: pointer;
-  color: black;
   margin-right: 1%;
 }
+
+/* rgb(126, 45, 255) */
+

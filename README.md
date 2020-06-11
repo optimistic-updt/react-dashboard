@@ -9,7 +9,7 @@
 - [React-onClickOutside HOC component](https://github.com/Pomax/react-onclickoutside)
 - [Font Awesome]
 -{ion-icon}
-- [styled Components]
+- [styled Components](https://styled-components.com/)
 
 ## Available Scripts
 
