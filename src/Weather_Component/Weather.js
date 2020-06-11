@@ -3,6 +3,7 @@ import './Weather.css'
 // import reverseGeoCoding from './reverseGeo'
 import getTemperature from './getTemp'
 import ToggleSwitch from '../ToggleSwitch/ToggleSwitch'
+import Toggle from '../ToggleSS'
 
 
 
@@ -59,7 +60,8 @@ class Weather extends React.Component {
 
           <div className="right-side">
             <p className="temperature">{this.state.temperature}24ºC</p>
-            <ToggleSwitch />
+            {/* <ToggleSwitch /> */}
+            <Toggle />
           </div>
         </div>
       </section>
