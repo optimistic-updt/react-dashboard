@@ -1,23 +1,23 @@
 import React from 'react';
+import './Header.css'
+
+
 import Login from './login'
-// import NavCategory from './NavCategory'
-import ToggleSwitch from '../ToggleSwitch/ToggleSwitch';
+import ToggleTheme from '../Toggle'
 import Nav from './Nav'
 
 
 
 
-function HeaderMain() {
+function HeaderMain(props) {
   return (
-    <header className="main-header section group">
+    <header className="main-header">
       <img src="../logo192.png" alt="logo" className="logo"/>
       
       <Nav />
 
-      <ToggleSwitch />
-
+      <ToggleTheme theme={props.theme} toggleTheme={props.toggleTheme}/>
       <Login />
-    
     </header>
   )
 }

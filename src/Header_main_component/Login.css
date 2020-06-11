@@ -7,7 +7,7 @@
 
 .login--username {
   font-weight: 700;
-  color: #ffffff;
+  color: #fafafa;
   padding: 10px 15px;
   background-color: inherit;
   font-family: inherit;
@@ -26,26 +26,24 @@
 .login--dropdown {
   display: none;
   position: absolute;
-  background-color: rgb(255, 255, 255);
-  min-width: 160px;
-  box-shadow: 0 2px 2px #8c8c8c;
   z-index: 1;
   margin-top: 15px;
-  border: 1px solid rgb(109,109,109);
   border-radius: 5px;
   width: 100%;
-  /* top: 0; */
   transition: all ease-out 1s;
 }
 
 .login--dropdown a{
   float: none;
-  color: black;
   width: 100%;
   display: block;
   padding: 10px 15px;
   text-decoration: none;
-  text-align: left;
+  text-align: center;
+}
+.login--dropdown a:hover {
+  background-color: rgb(0, 230, 230);
+  color: black;
 }
 
 .login .arrow {
@@ -55,5 +53,4 @@
 
 .display {
   display: block;
-  /* top: 42px; */
 }

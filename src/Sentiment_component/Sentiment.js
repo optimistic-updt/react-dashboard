@@ -72,8 +72,6 @@ class Sentiment extends React.Component {
         <form action="">
           <input type="text" placeholder="How are you feeling today?" onChange={this.handleChange}/>
           
-          {/* <Input placeholder="How are you feeling today?" onChange={this.handleChange} /> */}
-
           <output>{isLoading ? "Thinking..." : output}</output>
 
           <button 

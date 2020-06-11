@@ -12,7 +12,7 @@ const ToggleContainer = styled.button`
   border: 2px solid ${({ theme }) => theme.toggleBorder};
   border-radius: 30px;
   cursor: pointer;
-  margin: 0 auto;
+  ${'' /* margin: 0 auto; */}
   padding: 0.5rem;
   position: relative;
   width: 4rem;

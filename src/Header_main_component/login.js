@@ -1,5 +1,6 @@
 import React from 'react'
 import './Login.css'
+import onClickOutside from "react-onclickoutside"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faAngleDown } from '@fortawesome/free-solid-svg-icons'
 
@@ -42,6 +43,12 @@ class Login extends React.Component {
     }
   }
 
+  handleClickOutside = () => {
+    this.setState({
+      isOpen: false
+    })
+  }
+
   render() {
     let { isOpen, isLoggedIn } = this.state
 
@@ -67,7 +74,7 @@ class Login extends React.Component {
   }
 }
 
-export default Login
+export default onClickOutside(Login)
 
 
 

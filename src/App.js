@@ -5,10 +5,9 @@ import { ThemeProvider } from 'styled-components'
 import { lightTheme, darkTheme } from './theme'
 import { GlobalStyles } from './global'
 
-
+import { useDarkMode } from './useDarkMode'
 
 import HeaderMain from './Header_main_component/Header_main';
-import ToggleTheme from './Toggle'
 import Sentiment from './Sentiment_component/Sentiment'
 import Weather from './Weather_Component/Weather'
 import ToDo from './To_do_component/ToDo'
@@ -21,42 +20,24 @@ dotenv.config();
 
 
 function App() {
-
-  const [theme, setTheme] = useState('light')
-
-    const toggleTheme = () => {
-
-      if (theme === 'light') {
-        setTheme('dark')
-      } else {
-        setTheme('light')
-      }
-    }
-
+    const [theme, toggleTheme] = useDarkMode()
 
     return (
       <ThemeProvider theme={theme === 'light' ? lightTheme : darkTheme}>
         <>
           <GlobalStyles />
-
             <div className="App">
 
-              <HeaderMain />
+              <HeaderMain theme={theme} toggleTheme={toggleTheme}/>
+
               <main className="main-wrapper">
-
-                <ToggleTheme theme={theme} toggleTheme={toggleTheme}/>
-
-                {/* <button onClick={toggleTheme}>hit me</button> */}
-                
-
-
                 <Sentiment />
                 <Weather />
                 <ToDo />
               </main>
+
               <FooterMain />
             </div>
-
         </>
       </ThemeProvider>
     );
