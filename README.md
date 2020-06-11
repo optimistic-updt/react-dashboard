@@ -6,7 +6,7 @@
 - [Complimentr for compliments](https://complimentr.com/)
 - [Sentim-api for text sentiments](https://sentim-api.herokuapp.com/)
 
-
+- [React-onClickOutside HOC component](https://github.com/Pomax/react-onclickoutside)
 
 ## Available Scripts
 

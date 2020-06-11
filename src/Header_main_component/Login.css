@@ -24,17 +24,16 @@
 }
 
 .login--dropdown {
-  /* display: none; */
+  display: none;
   position: absolute;
-  background-color: rgb(242, 242, 242);
+  background-color: rgb(255, 255, 255);
   min-width: 160px;
   box-shadow: 0 2px 2px #8c8c8c;
   z-index: 1;
-  /* margin-top: px; */
+  margin-top: 15px;
   border: 1px solid rgb(109,109,109);
   border-radius: 5px;
   width: 100%;
-
 }
 
 .login--dropdown a{
@@ -45,4 +44,13 @@
   padding: 10px 15px;
   text-decoration: none;
   text-align: left;
+}
+
+.login .arrow {
+  margin-left: 10px;
+  transition: all ease .3s;
+}
+
+.display {
+  display: block;
 }

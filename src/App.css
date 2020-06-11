@@ -54,7 +54,9 @@ button:hover {
   
 }
 
-
+.App {
+  background-color: rgb(227, 227, 227);
+}
 
 .main-wrapper {
   display: -ms-grid;

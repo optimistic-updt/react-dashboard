@@ -42,11 +42,11 @@
 .nav--category-dropdown {
   display: none;
   position: absolute;
-  background-color: rgb(242, 242, 242);
+  background-color: var(--widget-bg);
   min-width: 160px;
   box-shadow: 0 2px 2px #8c8c8c;
   z-index: 1;
-  /* margin-top: px; */
+  margin-top: 15px;
   border: 1px solid rgb(109,109,109);
   border-radius: 5px;
   /* width: 100%; */
@@ -72,6 +72,11 @@
   padding-bottom: 15px;
 }
 
-.nav--category:hover .nav--category-dropdown {
+.nav--category .arrow {
+  margin-left: 10px;
+  transition: all ease .3s;
+}
+
+.display{
   display: block;
 }

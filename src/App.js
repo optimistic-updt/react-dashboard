@@ -14,23 +14,29 @@ dotenv.config();
 
 
 
-function App() {
+class App extends React.Component {
 
-  return (
-    <div className="App">
-      
-      <HeaderMain />
+  state = {
+    darkMode: true
+  }
 
-      <main className="main-wrapper">
-        <Sentiment />
-        <Weather />
-        <ToDo />
-      </main>
-
-      <FooterMain />
-
-    </div>
-  );
+  render(){
+    return (
+      <div className="App">
+        
+        <HeaderMain />
+  
+        <main className="main-wrapper">
+          <Sentiment />
+          <Weather />
+          <ToDo />
+        </main>
+  
+        <FooterMain />
+  
+      </div>
+    );
+  }
 }
 
 export default App;
