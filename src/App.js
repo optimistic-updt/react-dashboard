@@ -1,9 +1,14 @@
-import React from 'react';
-import './grid.css';
+import React, { useState } from 'react';
 import './App.css';
-// import axios from 'axios';
+
+import { ThemeProvider } from 'styled-components'
+import { lightTheme, darkTheme } from './theme'
+import { GlobalStyles } from './global'
+
+
 
 import HeaderMain from './Header_main_component/Header_main';
+import ToggleTheme from './Toggle'
 import Sentiment from './Sentiment_component/Sentiment'
 import Weather from './Weather_Component/Weather'
 import ToDo from './To_do_component/ToDo'
@@ -14,29 +19,48 @@ dotenv.config();
 
 
 
-class App extends React.Component {
 
-  state = {
-    darkMode: true
-  }
+function App() {
 
-  render(){
+  const [theme, setTheme] = useState('light')
+
+    const toggleTheme = () => {
+
+      if (theme === 'light') {
+        setTheme('dark')
+      } else {
+        setTheme('light')
+      }
+    }
+
+
     return (
-      <div className="App">
-        
-        <HeaderMain />
-  
-        <main className="main-wrapper">
-          <Sentiment />
-          <Weather />
-          <ToDo />
-        </main>
-  
-        <FooterMain />
-  
-      </div>
+      <ThemeProvider theme={theme === 'light' ? lightTheme : darkTheme}>
+        <>
+          <GlobalStyles />
+
+            <div className="App">
+
+              <HeaderMain />
+              <main className="main-wrapper">
+
+                <ToggleTheme theme={theme} toggleTheme={toggleTheme}/>
+
+                {/* <button onClick={toggleTheme}>hit me</button> */}
+                
+
+
+                <Sentiment />
+                <Weather />
+                <ToDo />
+              </main>
+              <FooterMain />
+            </div>
+
+        </>
+      </ThemeProvider>
     );
-  }
+
 }
 
 export default App;

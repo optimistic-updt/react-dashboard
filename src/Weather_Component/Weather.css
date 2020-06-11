@@ -1,16 +1,36 @@
 .weather {
   grid-area: 1 / 4 / span 1 / span 1  ;
-  text-align: right;
+  text-align: right; 
+  width: 80%;
+  justify-self: center;
+  /* background-color: var(--widget-bg); */
 }
 
-.weather p {
-  padding: 10px;
+.weather h4 {
+  font-size: 100%;
+  padding-top: 10px;
+  padding-right: 3px;
+}
+
+.weather .grid-wrapper {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+}
+
+.weather ion-icon {
+  align-self: center;
+  justify-self: center;
+  font-size: 40px;
+}
+
+.weather .right-side {
+  padding: 5px;
 }
 
 .weather .temperature {
-  margin-left: 25%;
+  font-size: 120%;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  padding: 7px 5px 13px 5px;
 }
 
-.weather .toggle-switch {
-  height: 100px;
-}

@@ -18,7 +18,9 @@
     "react-dom": "^16.13.1",
     "react-onclickoutside": "^6.9.0",
     "react-scripts": "3.4.1",
-    "sass": "^1.26.8"
+    "sass": "^1.26.8",
+    "styled-components": "^5.1.1",
+    "styled-theming": "^2.2.0"
   },
   "scripts": {
     "start": "react-scripts start",

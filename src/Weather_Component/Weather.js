@@ -54,14 +54,23 @@ class Weather extends React.Component {
     return(
       <section className="weather widget section--weather">
         <h4>Melbourne, Australia</h4>
-        <p>
-          <span>icon</span>
-          <span className="temperature">{this.state.temperature}ºC</span>
-        </p>
-        <ToggleSwitch className="toggle-switch"/>
+        <div className="grid-wrapper">
+          <ion-icon name="sunny"></ion-icon>
+
+          <div className="right-side">
+            <p className="temperature">{this.state.temperature}24ºC</p>
+            <ToggleSwitch />
+          </div>
+        </div>
       </section>
     )
   }
 }
 
 export default Weather
+
+{/* <ion-icon name="partly-sunny"></ion-icon> */}
+{/* <ion-icon name="partly-sunny"></ion-icon> */}
+{/* <ion-icon name="cloudy-night"></ion-icon> */}
+{/* <ion-icon name="thunderstorm"></ion-icon> */}
+{/* <ion-icon name="rainy"></ion-icon> */}
