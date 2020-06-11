@@ -1,8 +1,8 @@
-import React, { Component } from 'react'
+import React from 'react'
 import onClickOutside from "react-onclickoutside"
 import './NavCategory.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faAngleUp, faAngleDown } from '@fortawesome/free-solid-svg-icons'
+import { faAngleDown } from '@fortawesome/free-solid-svg-icons'
 
 
 
@@ -54,7 +54,7 @@ class NavCategory extends React.Component {
 
           {this.props.menuItems.map((item,idx) => (
             <a 
-              href="#" 
+              href="/" 
               key={idx} 
               className="nav--category-dropdown-item"
               onClick={this.toggleOnClick}

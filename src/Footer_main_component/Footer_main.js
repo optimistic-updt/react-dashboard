@@ -1,7 +1,7 @@
 import React from 'react'
 import './FooterMain.css'
 import { FontAwesomeIcon }  from '@fortawesome/react-fontawesome'
-import { faTwitterSquare, faGithubSquare, faLinkedin } from '@fortawesome/free-brands-svg-icons'
+import { faGithubSquare, faLinkedin } from '@fortawesome/free-brands-svg-icons'
 
 function FooterMain() {
   return(

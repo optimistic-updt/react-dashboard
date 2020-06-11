@@ -27,8 +27,9 @@ class Login extends React.Component {
     }
   }
 
-  toggleLoginIn = () => {
+  toggleLoginIn = (e) => {
     let { isLoggedIn } = this.state
+    e.preventDefault()
 
     if (isLoggedIn) {
       this.setState({ 
@@ -65,7 +66,7 @@ class Login extends React.Component {
             : "login--dropdown"
             }
           >
-          <a href="#" className="login--dropdown-item" onClick={this.toggleLoginIn}>
+          <a href="/" className="login--dropdown-item" onClick={this.toggleLoginIn}>
             { isLoggedIn ? "Sign out" : "Sign In"}
           </a>
         </div>

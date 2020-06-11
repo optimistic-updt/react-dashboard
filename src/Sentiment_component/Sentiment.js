@@ -1,7 +1,5 @@
 import React from 'react'
 import './Sentiment.css'
-
-import Input from '../Input/Input'
 import axios from 'axios';
 
 

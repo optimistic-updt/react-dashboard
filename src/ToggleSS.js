@@ -4,7 +4,6 @@ import styled from 'styled-components'
 
 import { FontAwesomeIcon }  from '@fortawesome/react-fontawesome'
 import { faCircle } from '@fortawesome/free-solid-svg-icons'
-import { faMoon } from '@fortawesome/free-regular-svg-icons'
 
 
 const ToggleContainer = styled.button`
@@ -36,11 +35,11 @@ ${'' /*
 
 const Toggle = ({ theme, toggleTheme }) => {
   const isLight = theme === 'light'
-  const style = {
-    backgroundColor: 'red',
-    heigh: '1.5rem',
-    width: '1.5rem'
-  }
+  // const style = {
+  //   backgroundColor: 'red',
+  //   heigh: '1.5rem',
+  //   width: '1.5rem'
+  // }
 
   return (
     <ToggleContainer onClick={toggleTheme} lightTheme={isLight}>

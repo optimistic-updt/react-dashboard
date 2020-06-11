@@ -7,7 +7,7 @@ function Nav() {
 
   return(
     <nav className="nav">
-      <a href="#">Overview</a>
+      <a href="/">Overview</a>
       <NavCategory 
         name="Calendar"
         key="1" 

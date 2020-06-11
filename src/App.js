@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './App.css';
 
 import { ThemeProvider } from 'styled-components'
@@ -49,12 +49,3 @@ function App() {
 }
 
 export default App;
-
-
-
-        {/* <section className="section section--sleeptracker span_1_of_4">
-          <h4>How many hours did you sleep?</h4>
-          <input type="number"/>
-          <h4>How well did you sleep?</h4>
-          <input type="text"/>
-        </section> */}
