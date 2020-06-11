@@ -6,6 +6,7 @@ import { faTwitterSquare, faGithubSquare, faLinkedin } from '@fortawesome/free-b
 function FooterMain() {
   return(
     <footer className="main-footer">
+      <p>Built on React</p>
       <p>&copy; Kevin Garcia Fernandez</p>
       <div className="socials">
         <a href="https://github.com/CumulusGround"><FontAwesomeIcon icon={faGithubSquare} size="3x" /></a>

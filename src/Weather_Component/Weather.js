@@ -25,12 +25,12 @@ class Weather extends React.Component {
       let coordinates = `${latitude}%2C+${longitude}`
 
       // fetch Temperature for melbourne
-      getTemperature().then(res => {
-        console.log(res.data);
-        this.setState({
-          temperature: res.data
-        })
-      })
+      // getTemperature().then(res => {
+      //   console.log(res.data);
+      //   this.setState({
+      //     temperature: res.data
+      //   })
+      // })
     }
   
     function locNotSupported() {
@@ -60,7 +60,6 @@ class Weather extends React.Component {
 
           <div className="right-side">
             <p className="temperature">{this.state.temperature}24ºC</p>
-            {/* <ToggleSwitch /> */}
             <Toggle />
           </div>
         </div>

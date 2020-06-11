@@ -9,11 +9,18 @@
 }
 
 .main-footer p {
-  padding: 10px;
+  
+}
+
+.main-footer p:first-child {
+  /* background-color: red; */
+  padding-top: 10px;
+  font-weight: 700;
+  padding-bottom: 5px;
 }
 
 .main-footer .socials {
-  padding-bottom: 10px;
+  padding: 10px 0;
 }
 
 .main-footer a {
