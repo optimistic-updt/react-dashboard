@@ -12,24 +12,18 @@ function Nav() {
         name="Calendar"
         key="1" 
         menuItems={['month', 'week', 'day']}
-        // panOpen={panOpen}
-        // toggleOnclick={this.toggleOnclick} 
-        />
+      />
 
       <NavCategory 
-      name="Finance"
-      key="2" 
-      menuItems={['test', 'test', 'test', 'test', 'test']}
-      // panOpen={panOpen}
-      // toggleOnclick={this.toggleOnclick} 
-        /> 
+        name="Finance"
+        key="2" 
+        menuItems={['test', 'test', 'test', 'test', 'test']}
+      /> 
 
       <NavCategory 
-      name="Fitness" 
-      key="3"
-      menuItems={['overview', 'running', 'gym', 'golf', 'test']}
-      // panOpen={panOpen}
-      // toggleOnclick={this.toggleOnclick}  
+        name="Fitness" 
+        key="3"
+        menuItems={['overview', 'running', 'gym', 'golf', 'test']}
       />
     </nav>
   )

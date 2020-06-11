@@ -1,5 +1,5 @@
 .to-do {
-  grid-area: 2 / 2 /span 2 / span 2;
+  grid-area: 1 / 1 /span 3 / span 1;
   width: 100%;
   margin: 0 auto;
   position: relative;
@@ -7,9 +7,9 @@
 }
 
 .to-do .to-do--grid {
-  display: grid;
+  /* display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
+  grid-template-rows: 1fr 1fr; */
   border: 1px solid black;
   width: 100%;
 }
@@ -29,4 +29,8 @@
   position: absolute;
   bottom: 0;
   width: 95%;
+}
+
+.to-do button {
+  margin-left: 1%;
 }

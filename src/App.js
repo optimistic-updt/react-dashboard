@@ -34,6 +34,10 @@ function App() {
                 <Sentiment />
                 <Weather />
                 <ToDo />
+                <div className="widget chart">
+                  <img src="https://docs.moodle.org/dev/images_dev/c/c5/bar_chart.png" alt="chart" />
+                </div>
+                <div className="widget news">news</div>
               </main>
 
               <FooterMain />
