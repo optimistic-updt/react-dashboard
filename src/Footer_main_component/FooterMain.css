@@ -3,7 +3,7 @@
   text-align: center;
   box-shadow: 0 -2px 2px #373737;
   margin-top: 40px;
-  /* bottom: 0; */
+  bottom: 0;
   position: absolute;
   width: 100%;
 }
