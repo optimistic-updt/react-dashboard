@@ -28,7 +28,10 @@ class Chart extends React.Component {
   }
 
   render() {
-    let style = { display: this.state.isHidden ? 'none' : 'inline'}
+    let style = { 
+      display: this.state.isHidden ? 'none' : 'inline',
+      width: '100%' 
+    }
 
     return (
       <div className="widget chart">

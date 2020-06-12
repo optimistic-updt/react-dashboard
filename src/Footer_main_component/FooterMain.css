@@ -3,7 +3,7 @@
   text-align: center;
   box-shadow: 0 -2px 2px #373737;
   margin-top: 40px;
-  bottom: 0;
+  /* bottom: 0; */
   position: absolute;
   width: 100%;
 }
@@ -13,7 +13,6 @@
 }
 
 .main-footer p:first-child {
-  /* background-color: red; */
   padding-top: 10px;
   font-weight: 700;
   padding-bottom: 5px;
