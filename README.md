@@ -10,6 +10,17 @@
 - [React-onClickOutside HOC component](https://github.com/Pomax/react-onclickoutside)
 - [Font Awesome](https://fontawesome.com/)
 - [ion-icon](https://ionicons.com/)
-- [styled Components](https://styled-components.com/)
+- [Styled Components](https://styled-components.com/)
 
-## README TBF on Monday
+### Key features
+
+- A feeling widget
+- Dark Mode, remenbers user preferences and OS preference
+- Conditionnal rendering of the login component
+
+### To Improve
+
+- news widget
+- to do list
+- chart widget
+- styling
