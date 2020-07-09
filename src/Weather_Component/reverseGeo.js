@@ -8,12 +8,11 @@ async function reverseGeoCoding(coordinates) {
   let params = {
     "q": coordinates,
     "key": process.env.OPENCAGE_API,
-    // "no_annotations": 1,
-    // "limit": 3
   }
   // let headers = {'X-RateLimit-Remaining'}
 
   let results = await axios({baseURL, params})
+  
   console.log(results.data.results.components);
   return results.data.results.components
 }

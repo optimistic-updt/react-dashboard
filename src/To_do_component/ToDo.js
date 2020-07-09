@@ -39,32 +39,19 @@ class ToDo extends React.Component {
   render() {
     let { listContent } = this.state
     let displayedList = listContent.map((item, idx) => (
-      <p key={idx} className="list-item" onClick={this.handleRemove}>{item}</p>
+      <li key={idx} className="list-item" onClick={this.handleRemove}>{item}</li>
     ))
 
 
     return(
       <section className="widget to-do">
-        <div className="to-do--grid">
-          <section className="to-do--grid-square grid-square-a">
-            <h6>To Do List</h6>
-            <output>
-              {displayedList}
-            </output>
-          {/* </section>
-          <section className="to-do--grid-square grid-square-b">
-            <h6>B</h6>
-            <output>asaf</output>
-          </section>
-          <section className="to-do--grid-square grid-square-c">
-            <h6>C</h6>
-            <output>asaf</output>
-          </section>
-          <section className="to-do--grid-square grid-square-d">
-            <h6>D</h6>
-            <output>asaf</output> */}
-          </section>
-        </div>
+        <section className="to-do--grid-square grid-square-a">
+          <h6>What are you looking to achieve today ?</h6>
+          <ul>
+            {displayedList}
+          </ul>
+        </section>
+      
   
         <form className="input-flex">
           <Input placeholder="Something to add?" value={this.state.inputValue} onChange={this.handleChange}/>

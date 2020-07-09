@@ -49,6 +49,12 @@ button:hover {
   }
 }
 
+.widget {
+  padding: 10px;
+  border-radius: 5px;
+}
+
+
 .news {
   grid-area: 2 / 4 / span 2 / span 1;
   text-align: center;

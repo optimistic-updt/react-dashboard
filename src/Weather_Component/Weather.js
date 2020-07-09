@@ -1,7 +1,7 @@
 import React from 'react'
 import './Weather.css'
-// import reverseGeoCoding from './reverseGeo'
-// import getTemperature from './getTemp'
+import reverseGeoCoding from './reverseGeo'
+import getTemperature from './getTemp'
 import Toggle from '../ToggleSS'
 
 
@@ -11,7 +11,7 @@ import Toggle from '../ToggleSS'
 class Weather extends React.Component {
 
   state = {
-    temperatureInC: 0
+    temperatureInC: 10
   }
 
 
@@ -21,15 +21,20 @@ class Weather extends React.Component {
       let { latitude , longitude } = position.coords
       console.log(`lat ${latitude} & long ${longitude}`);
 
+      let coordinates = `${latitude}, ${longitude}`
+      let city = "" 
+
+      // reverseGeoCoding(coordinates)
+
       // let coordinates = `${latitude}%2C+${longitude}`
 
       // fetch Temperature for melbourne
-      // getTemperature().then(res => {
-      //   console.log(res.data);
-      //   this.setState({
-      //     temperature: res.data
-      //   })
-      // })
+      getTemperature().then(res => {
+        console.log(res.data);
+        // this.setState({
+        //   temperature: res.data
+        // })
+      })
     }
   
     function locNotSupported() {
@@ -58,7 +63,7 @@ class Weather extends React.Component {
           <ion-icon name="sunny"></ion-icon>
 
           <div className="right-side">
-            <p className="temperature">{this.state.temperature}24ºC</p>
+            <p className="temperature">{this.state.temperatureInC + "ºC"}</p>
             <Toggle />
           </div>
         </div>
