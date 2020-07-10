@@ -26,4 +26,28 @@
 .to-do li {
   margin-bottom: 15px;
   font-size: 1rem;
+  cursor: pointer;
+  transition: color ease .3s, font-weight ease .3s;
+  
+}
+
+.to-do li:hover {
+  color: rgb(2, 113, 198);
+  font-weight: 500;
+}
+
+.to-do-buttons {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.input-flex button:last-child {
+  margin-left: 3%;
+}
+
+@media (max-width: 1024px) { 
+  .to-do {
+    grid-area: 3 / 1 / auto / span 2;
+    width: 100%;
+  }
 }

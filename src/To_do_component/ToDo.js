@@ -10,6 +10,18 @@ class ToDo extends React.Component {
     inputValue: '',
   }
 
+  componentDidMount() {
+    if (localStorage.getItem('toDoList')) {
+      const savedToDoList = localStorage.getItem('toDoList')
+      const parsedToDoList = savedToDoList.split(",")
+      this.setState({ listContent: parsedToDoList })
+    }
+  }
+
+  componentDidUpdate() {
+    localStorage.setItem('toDoList', this.state.listContent)
+  }
+
 
   handleChange = (e) => {
     this.setState({
@@ -21,6 +33,7 @@ class ToDo extends React.Component {
   handleAdd = (e) => {
     let { listContent, inputValue } = this.state
     e.preventDefault()
+
     this.setState({
       listContent: [...listContent, inputValue],
       inputValue: ''
@@ -28,20 +41,31 @@ class ToDo extends React.Component {
   }
 
   handleRemove = (e) => {
-    console.log(e.target);
     let { listContent } = this.state
-    let newList = listContent.filter(item => item !== e.target.key)
-    this.setState({
-      listContent: newList
-    })
+    // let isConfirm = confirm("Are you sure?");
+    
+    // if (isConfirm) {
+      const newList = listContent.filter(item => item !== e.target.textContent)
+      this.setState({listContent: newList})
+    // }
   }
+
+  handleClear = (e) => {
+    e.preventDefault()
+    // localStorage.removeItem('toDoList')
+    this.setState({ listContent: [] })
+  }
+
 
   render() {
     let { listContent } = this.state
     let displayedList = listContent.map((item, idx) => (
-      <li key={idx} className="list-item" onClick={this.handleRemove}>{item}</li>
+      <li 
+        key={idx} 
+        className="list-item" 
+        onClick={this.handleRemove}
+      >{item}</li>
     ))
-
 
     return(
       <section className="widget to-do">
@@ -55,7 +79,10 @@ class ToDo extends React.Component {
   
         <form className="input-flex">
           <Input placeholder="Something to add?" value={this.state.inputValue} onChange={this.handleChange}/>
-          <button onClick={this.handleAdd}>Add</button>
+          <div className="to-do-buttons">
+            <button onClick={this.handleAdd}>Add</button>
+            <button onClick={this.handleClear}>Clear List</button>
+          </div>
         </form>
   
       </section>

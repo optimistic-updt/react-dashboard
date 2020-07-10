@@ -14,8 +14,9 @@
 
 ### Key features
 
-- A feeling widget
-- Dark Mode, remenbers user preferences and OS preference
+- A NLP-powered feeling widget
+- Dark Mode, remembers user preferences and OS preference
+- To do list that gets saved to LocalStorage
 - Conditionnal rendering of the login component
 
 ### To Improve

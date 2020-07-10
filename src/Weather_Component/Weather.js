@@ -1,7 +1,6 @@
 import React from 'react'
 import './Weather.css'
-import reverseGeoCoding from './reverseGeo'
-import getTemperature from './getTemp'
+
 import Toggle from '../ToggleSS'
 
 
@@ -24,17 +23,6 @@ class Weather extends React.Component {
       let coordinates = `${latitude}, ${longitude}`
       let city = "" 
 
-      // reverseGeoCoding(coordinates)
-
-      // let coordinates = `${latitude}%2C+${longitude}`
-
-      // fetch Temperature for melbourne
-      getTemperature().then(res => {
-        console.log(res.data);
-        // this.setState({
-        //   temperature: res.data
-        // })
-      })
     }
   
     function locNotSupported() {
