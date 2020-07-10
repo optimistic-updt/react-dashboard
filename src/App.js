@@ -11,8 +11,8 @@ import HeaderMain from './Header_main_component/Header_main';
 import Sentiment from './Sentiment_component/Sentiment'
 import Weather from './Weather_Component/Weather'
 import ToDo from './To_do_component/ToDo'
-import Chart from './components/Chart'
 import FooterMain from './Footer_main_component/Footer_main'
+import ChartWidget from './components/Chart';
 
 const dotenv = require('dotenv');
 dotenv.config();
@@ -35,7 +35,7 @@ function App() {
               <Sentiment />
               <Weather />
               <ToDo />
-              <Chart />
+              <ChartWidget />
               <div className="widget news">news</div>
             </main>
 

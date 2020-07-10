@@ -1,29 +1,72 @@
-import React from 'react'
+import React, { Component } from 'react'
 
-class Chart extends React.Component {
+import '../../node_modules/react-vis/dist/style.css';
+import {XYPlot, LineSeries, VerticalGridLines, HorizontalGridLines, XAxis, YAxis, Crosshair} from 'react-vis';
+
+
+class ChartWidget extends React.Component {
+
   state = {
-    isHidden: false
-  }
-
-  toggleView = () => {
-    this.setState({
-      isHidden: this.state.isHidden ? false : true
-    })
+    crosshairValues: []
   }
 
   render() {
-    let style = { 
-      display: this.state.isHidden ? 'none' : 'inline',
-      width: '100%' 
+    const DATA = [
+      [
+        {x: "jan", y: 5000},
+        {x: "feb", y: 7200},
+        {x: "march", y: 7500},
+        {x: "april", y: 8300},
+        {x: "may", y: 8900},
+        {x: "june", y: 7900},
+        {x: "july", y: 8700},
+        {x: "aug", y: 9999},
+        {x: "sept", y: 12000},
+        {x: "oct", y: 12800}
+      ],
+      [
+        {x: "jan", y: 5000},
+        {x: "feb", y: 6000},
+        {x: "march", y: 7100},
+        {x: "april", y: 7900},
+        {x: "may", y: 8500},
+        {x: "june", y: 8500},
+        {x: "july", y: 8700},
+        {x: "aug", y: 9500},
+        {x: "sept", y: 10500},
+        {x: "oct", y: 11000},
+      ],
+    ]
+    
+
+    let style = {
+      border: "1px solid black",
+      width: "100%"
     }
 
     return (
       <div className="widget chart">
-      <img src="https://docs.moodle.org/dev/images_dev/c/c5/bar_chart.png" alt="chart" style={style} />
-      <button onClick={this.toggleView}>Hide</button>
-    </div>
+        <XYPlot 
+          height={300} 
+          width={600} 
+          style={ style }
+          xType={ 'ordinal' }
+          onMouseLeave={() => this.setState({crosshairValues: []})}  
+        >
+          <XAxis />
+          <YAxis />
+          <LineSeries 
+            data={DATA[0]}
+            onNearestX={(value, {index}) =>
+              this.setState({crosshairValues: DATA.map(d => d[index])})
+            }   
+            />
+          <LineSeries data={DATA[1]} color="red" />
+          <Crosshair values={this.state.crosshairValues}/>
+        </XYPlot>
+      </div>
     )
   }
 }
 
-export default Chart
+export default ChartWidget
