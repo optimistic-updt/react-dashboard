@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import './Chart.css'
 
 import '../../node_modules/react-vis/dist/style.css';
 import {XYPlot, LineSeries, VerticalGridLines, HorizontalGridLines, XAxis, YAxis, Crosshair} from 'react-vis';
@@ -38,32 +39,27 @@ class ChartWidget extends React.Component {
       ],
     ]
     
-
-    let style = {
-      border: "1px solid black",
-      width: "100%"
-    }
-
     return (
       <div className="widget chart">
-        <XYPlot 
-          height={300} 
-          width={600} 
-          style={ style }
-          xType={ 'ordinal' }
-          onMouseLeave={() => this.setState({crosshairValues: []})}  
-        >
-          <XAxis />
-          <YAxis />
-          <LineSeries 
-            data={DATA[0]}
-            onNearestX={(value, {index}) =>
-              this.setState({crosshairValues: DATA.map(d => d[index])})
-            }   
-            />
-          <LineSeries data={DATA[1]} color="red" />
-          <Crosshair values={this.state.crosshairValues}/>
-        </XYPlot>
+        <div className="graph-positioning">
+          <XYPlot 
+            height={400} 
+            width={720} 
+            xType={ 'ordinal' }
+            onMouseLeave={() => this.setState({crosshairValues: []})}  
+          >
+            <XAxis />
+            <YAxis />
+            <LineSeries 
+              data={DATA[0]}
+              onNearestX={(value, {index}) =>
+                this.setState({crosshairValues: DATA.map(d => d[index])})
+              }   
+              />
+            <LineSeries data={DATA[1]} color="red" />
+            <Crosshair values={this.state.crosshairValues}/>
+          </XYPlot>
+        </div>
       </div>
     )
   }
