@@ -9,36 +9,39 @@ dotenv.config()
 
 class News extends React.Component {
 
+  state = {
+    latestNewsArticles : []
+  }
+
+
   componentDidMount() {
-    // get the news
     let getNews = {
       method: 'get',
       url: 'https://newsapi.org/v2/top-headlines',
-      params: {
-        country: 'au'
-      },
-      headers: {
-        'X-Api-Key': '270a4d61d2be44d2a20bc69b98a95370' //TODO
-        // 'Accept': "application/json", 
-        // "Content-Type": "application/json"
-      },
+      params: { country: 'au' },
+      headers: { 'X-Api-Key': '270a4d61d2be44d2a20bc69b98a95370' } //TODO
     }
 
     axios(getNews)
     .then(res => {
-      //get the image, title, url of the first 5 articles
-      let unformatedArticlesResponse = res.data.articles
-      let topFiveUnformatedArticles = unformatedArticlesResponse.slice(0,5)
-      let parsedTopFiveArticles = topFiveUnformatedArticles.map(article => {
-        // return article.title
-        let { title, url, urlToImage } = article
-        return title
-      })
-      console.log(parsedTopFiveArticles);
+      let latestNewsArticles = extractTopFiveAndParse(res)
+      this.setState({ latestNewsArticles: latestNewsArticles })
+      function extractTopFiveAndParse(res) {
+        let unformatedTwentyArticlesResponse = res.data.articles
+        let topFiveUnformatedArticles = unformatedTwentyArticlesResponse.slice(0,5)
+        let parsedTopFiveArticles = topFiveUnformatedArticles.map(formatArticles)
 
-      //set state with that information
-      //array of object
-
+        function formatArticles(article) {
+          let { title, url, urlToImage } = article
+          let parsedArticle = {
+            url: url,
+            image: urlToImage,
+            title: title
+          }
+          return parsedArticle
+        }
+        return parsedTopFiveArticles
+      } 
     })
     .catch(err => console.log(err))
   }
@@ -46,6 +49,7 @@ class News extends React.Component {
 
 
   render() {
+    let { latestNewsArticles } = this.state
 
     return (
       <div className="widget news">
