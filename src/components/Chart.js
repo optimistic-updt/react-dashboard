@@ -1,8 +1,8 @@
-import React, { Component } from 'react'
+import React from 'react'
 import './Chart.css'
 
 import '../../node_modules/react-vis/dist/style.css';
-import {XYPlot, LineSeries, VerticalGridLines, HorizontalGridLines, XAxis, YAxis, Crosshair} from 'react-vis';
+import {XYPlot, LineSeries, XAxis, YAxis, Crosshair} from 'react-vis';
 
 
 class ChartWidget extends React.Component {
