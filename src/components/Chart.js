@@ -14,28 +14,28 @@ class ChartWidget extends React.Component {
   render() {
     const DATA = [
       [
-        {x: "jan", y: 5000},
-        {x: "feb", y: 7200},
-        {x: "march", y: 7500},
-        {x: "april", y: 8300},
-        {x: "may", y: 8900},
-        {x: "june", y: 7900},
-        {x: "july", y: 8700},
-        {x: "aug", y: 9999},
-        {x: "sept", y: 12000},
-        {x: "oct", y: 12800}
+        {x: "jan", y: 500},
+        {x: "feb", y: 720},
+        {x: "march", y: 750},
+        {x: "april", y: 830},
+        {x: "may", y: 890},
+        {x: "june", y: 790},
+        {x: "july", y: 870},
+        {x: "aug", y: 999},
+        {x: "sept", y: 1200},
+        {x: "oct", y: 1280}
       ],
       [
-        {x: "jan", y: 5000},
-        {x: "feb", y: 6000},
-        {x: "march", y: 7100},
-        {x: "april", y: 7900},
-        {x: "may", y: 8500},
-        {x: "june", y: 8500},
-        {x: "july", y: 8700},
-        {x: "aug", y: 9500},
-        {x: "sept", y: 10500},
-        {x: "oct", y: 11000},
+        {x: "jan", y: 500},
+        {x: "feb", y: 600},
+        {x: "march", y: 710},
+        {x: "april", y: 790},
+        {x: "may", y: 850},
+        {x: "june", y: 850},
+        {x: "july", y: 870},
+        {x: "aug", y: 950},
+        {x: "sept", y: 1050},
+        {x: "oct", y: 1100},
       ],
     ]
     
@@ -44,7 +44,7 @@ class ChartWidget extends React.Component {
         <div className="graph-positioning">
           <XYPlot 
             height={400} 
-            width={720} 
+            width={600} 
             xType={ 'ordinal' }
             onMouseLeave={() => this.setState({crosshairValues: []})}  
           >

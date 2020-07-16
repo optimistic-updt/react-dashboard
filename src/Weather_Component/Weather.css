@@ -2,8 +2,8 @@
   grid-area: 1 / 4 / span 1 / span 1  ;
   text-align: right; 
   height: 100%;
+  max-height: 175px;
   justify-self: center;
-  /* background-color: var(--widget-bg); */
 }
 
 .weather h4 {

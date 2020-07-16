@@ -7,6 +7,7 @@ dotenv.config()
 
 
 
+
 class News extends React.Component {
 
   state = {
@@ -15,11 +16,14 @@ class News extends React.Component {
 
 
   componentDidMount() {
+    // console.log(`hey this is the env variable ${ process.env.REACT_APP_NEWS_API_KEY }`);
+    console.log(process.env.REACT_APP_TEST);
+
     let getNews = {
       method: 'get',
       url: 'https://newsapi.org/v2/top-headlines',
       params: { country: 'au' },
-      headers: { 'X-Api-Key': '270a4d61d2be44d2a20bc69b98a95370' } //TODO
+      headers: { 'X-Api-Key': process.env.REACT_APP_NEWS_API_KEY }
     }
 
     axios(getNews)
@@ -50,17 +54,26 @@ class News extends React.Component {
 
   render() {
     let { latestNewsArticles } = this.state
+    let newsList = latestNewsArticles.map(article => {
+      return (
+        <li className="news-item">
+        <a 
+          className="news-item-container"
+          href={article.url} 
+          target="blank" 
+        >
+          <img src={article.image} alt="news-article" className="news-item-image"/>
+          <p className="news-article-title">{article.title}</p>
+        </a>
+      </li>
+      )
+    })
 
     return (
       <div className="widget news">
         <h4>Today's Headline</h4>
         <ul className="news-list">
-          <li className="news-item">
-            <a href="https://www.theguardian.com/australia-news/2020/jul/14/better-for-her-majesty-not-to-know-palace-letters-reveal-queens-role-in-sacking-of-australian-pm-whitlam" target="blank" className="news-item-container">
-              <img src="https://www.placecage.com/70/70" alt=""/>
-              <p className="news-article-title">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime eaque molestias, nisi.</p>
-            </a>
-          </li>
+          { newsList }
         </ul>
       </div>
     )
