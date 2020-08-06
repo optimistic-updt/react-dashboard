@@ -6,7 +6,7 @@ const dotenv = require('dotenv');
 dotenv.config()
 
 
-// HARDCODED BECAUSE OF NEEDED TO PEY FOR API KEY WHEN DEPLOYED
+//HARDCODED BECAUSE OF NEEDED TO PEY FOR API KEY WHEN DEPLOYED
 
 class News extends React.Component {
 
